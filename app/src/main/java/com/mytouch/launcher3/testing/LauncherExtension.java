@@ -215,7 +215,10 @@ public class LauncherExtension extends Launcher {
 
         @Override
         public View getQsbBar() {
-            return mLauncherOverlay.getSearchBox();
+            /* chenguiming change 2016-03-10 begin */
+            //return mLauncherOverlay.getSearchBox();
+            /* chenguiming change 2016-03-10 end */
+            return null;
         }
 
         @Override

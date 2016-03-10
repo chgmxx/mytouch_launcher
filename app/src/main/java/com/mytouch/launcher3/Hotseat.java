@@ -97,7 +97,10 @@ public class Hotseat extends FrameLayout
         if (grid.isLandscape && !grid.isLargeTablet) {
             mContent.setGridSize(1, (int) grid.inv.numHotseatIcons);
         } else {
-            mContent.setGridSize((int) grid.inv.numHotseatIcons, 1);
+            /* chenguiming change 2016-03-10 begin */
+//            mContent.setGridSize((int) grid.inv.numHotseatIcons, 1);
+            mContent.setGridSize(3, 1);
+            /* chenguiming change 2016-03-10 end */
         }
         mContent.setIsHotseat(true);
 

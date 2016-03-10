@@ -3598,7 +3598,10 @@ public class Launcher extends Activity
                 createClickableSearch(1);
             }
         }
-        return mQsb;
+        /* chenguiming change  start */
+//        return mQsb;
+        return null;
+        /* chenguiming change  end */
     }
 
     private void createClickableSearch(final int tryNumber) {
