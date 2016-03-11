@@ -128,8 +128,10 @@ class LauncherClings implements OnClickListener {
 
             @Override
             public boolean onLongClick(View v) {
-                mLauncher.showOverviewMode(true);
-                dismissLongPressCling();
+                /* chenguiming change 2016/3/11 start */
+//                mLauncher.showOverviewMode(true);
+//                dismissLongPressCling();
+                /* chenguiming change 2016/3/11 end */
                 return true;
             }
         });

@@ -155,6 +155,11 @@ public class WidgetsContainerView extends BaseContainerView
 
     @Override
     public boolean onLongClick(View v) {
+        /* chenguiming change 2016/3/11 start */
+        if(true){
+            return true;
+        }
+        /* chenguiming change 2016/3/11 end */
         if (DEBUG) {
             Log.d(TAG, String.format("onLonglick [v=%s]", v));
         }

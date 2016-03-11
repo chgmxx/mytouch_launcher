@@ -452,6 +452,11 @@ public class AllAppsContainerView extends BaseContainerView implements DragSourc
 
     @Override
     public boolean onLongClick(View v) {
+        /* chenguiming change 2016/3/11 start */
+        if(true){
+            return false;
+        }
+        /* chenguiming change 2016/3/11 end */
         // Return early if this is not initiated from a touch
         if (!v.isInTouchMode()) return false;
         // When we have exited all apps or are in transition, disregard long clicks
