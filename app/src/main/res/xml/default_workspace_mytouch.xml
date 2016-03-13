@@ -20,16 +20,16 @@
     <!-- Left screen [1] -->
 
     <favorite
-        launcher:packageName="com.android.settings"
-        launcher:className="com.android.settings.Settings"
-        launcher:screen="3"
-        launcher:x="2"
-        launcher:y="3" />
-    <favorite
         launcher:packageName="com.mytouchtime.cubed"
         launcher:className="com.mytouchtime.cubed.Project.Main.Activity.MainActivity"
         launcher:screen="0"
-        launcher:x="1"
+        launcher:x="0"
+        launcher:y="0" />
+    <favorite
+        launcher:packageName="com.android.settings"
+        launcher:className="com.android.settings.Settings"
+        launcher:screen="0"
+        launcher:x="2"
         launcher:y="3" />
 
     <!-- Far-right screen [4] -->
@@ -60,8 +60,8 @@
 
     <resolve
         launcher:container="-101"
-        launcher:screen="3"
-        launcher:x="3"
+        launcher:screen="2"
+        launcher:x="2"
         launcher:y="0" >
         <favorite
             launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MESSAGING;end" />
@@ -74,18 +74,6 @@
             launcher:packageName="com.android.mms"
             launcher:className="com.android.mms.ui.ConversationList" />
     </resolve>
-    <resolve
-        launcher:container="-101"
-        launcher:screen="4"
-        launcher:x="4"
-        launcher:y="0" >
-        <favorite
-            launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_BROWSER;end" />
-        <favorite launcher:uri="http://www.example.com/" />
 
-        <favorite
-            launcher:packageName="com.android.browser"
-            launcher:className="com.android.browser.BrowserActivity" />
-    </resolve>
 
 </favorites>

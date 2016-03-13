@@ -1254,7 +1254,8 @@ public class LauncherProvider extends ContentProvider {
                         for (int idx=0; idx<N; idx++) {
                             int hotseatX = hotseat.keyAt(idx);
                             ContentValues values = hotseat.valueAt(idx);
-
+/* chenguiming change 2016/3/12 start */
+                            /*
                             if (hotseatX == profile.hotseatAllAppsRank) {
                                 // let's drop this in the next available hole in the hotseat
                                 while (++hotseatX < hotseatWidth) {
@@ -1266,6 +1267,8 @@ public class LauncherProvider extends ContentProvider {
                                     }
                                 }
                             }
+                            */
+                            /* chenguiming change 2016/3/12 end */
                             if (hotseatX >= hotseatWidth) {
                                 // no room for you in the hotseat? it's off to the desktop with you
                                 values.put(LauncherSettings.Favorites.CONTAINER,

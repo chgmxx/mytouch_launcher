@@ -10,7 +10,12 @@ public class BuildInfo {
     public boolean isDogfoodBuild() {
         return false;
     }
-
+    public  static boolean enableAllApp(){
+        return false;
+    }
+    public  static boolean disableAllApp(){
+        return !enableAllApp();
+    }
     public static BuildInfo loadByName(String className) {
         if (TextUtils.isEmpty(className)) return new BuildInfo();
 

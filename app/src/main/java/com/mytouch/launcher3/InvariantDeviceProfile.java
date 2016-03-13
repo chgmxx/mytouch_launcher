@@ -97,7 +97,11 @@ public class InvariantDeviceProfile {
     InvariantDeviceProfile(String n, float w, float h, int r, int c, int fr, int fc, int maapc,
             float is, float its, float hs, float his, int dlId) {
         // Ensure that we have an odd number of hotseat items (since we need to place all apps)
-        if (hs % 2 == 0) {
+        /* chenguiming change 2016/3/13 start */
+        //if (hs % 2 == 0) {
+        if (BuildInfo.enableAllApp() && hs % 2 == 0) {
+        /* chenguiming change 2016/3/13 end */
+
             throw new RuntimeException("All Device Profiles must have an odd number of hotseat spaces");
         }
 

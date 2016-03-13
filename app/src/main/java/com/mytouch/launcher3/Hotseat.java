@@ -84,7 +84,10 @@ public class Hotseat extends FrameLayout
     }
 
     public boolean isAllAppsButtonRank(int rank) {
-        return rank == mAllAppsButtonRank;
+        /* chenguiming change 2016/3/12 start */
+//        return rank == mAllAppsButtonRank;
+        return false;
+        /* chenguiming change 2016/3/12 end */
     }
 
     @Override
@@ -109,7 +112,11 @@ public class Hotseat extends FrameLayout
 
     void resetLayout() {
         mContent.removeAllViewsInLayout();
-
+/* chenguiming change 2016/3/13 start */
+        if(BuildInfo.disableAllApp()) {
+            return;
+        }
+/* chenguiming change 2016/3/13 end */
         // Add the Apps button
         Context context = getContext();
 
@@ -137,7 +144,9 @@ public class Hotseat extends FrameLayout
         int y = getCellYFromOrder(mAllAppsButtonRank);
         CellLayout.LayoutParams lp = new CellLayout.LayoutParams(x,y,1,1);
         lp.canReorder = false;
-        mContent.addViewToCellLayout(allAppsButton, -1, allAppsButton.getId(), lp, true);
+        /* chenguiming change 2016/3/12 start */
+//        mContent.addViewToCellLayout(allAppsButton, -1, allAppsButton.getId(), lp, true);
+        /* chenguiming change 2016/3/12 end */
     }
 
     @Override

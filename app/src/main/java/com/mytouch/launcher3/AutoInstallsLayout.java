@@ -224,10 +224,18 @@ public class AutoInstallsLayout {
      */
     protected void parseContainerAndScreen(XmlResourceParser parser, long[] out) {
         if (HOTSEAT_CONTAINER_NAME.equals(getAttributeValue(parser, ATTR_CONTAINER))) {
+            RuntimeException here = new RuntimeException("cgm");
+            here.fillInStackTrace();
+            Log.w(TAG, "Called: " + this, here);
             out[0] = Favorites.CONTAINER_HOTSEAT;
             // Hack: hotseat items are stored using screen ids
             long rank = Long.parseLong(getAttributeValue(parser, ATTR_RANK));
-            out[1] = (rank < mHotseatAllAppsRank) ? rank : (rank + 1);
+            /* chenguiming change 2016/3/13 start */
+            //out[1] = (rank < mHotseatAllAppsRank) ? rank : (rank + 1);
+            if(BuildInfo.disableAllApp()) {
+                out[1]=rank;
+            }
+            /* chenguiming change 2016/3/13 end */
         } else {
             out[0] = Favorites.CONTAINER_DESKTOP;
             out[1] = Long.parseLong(getAttributeValue(parser, ATTR_SCREEN));
